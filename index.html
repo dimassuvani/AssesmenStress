@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Assessment</title>
+    <link rel="stylesheet" href="/Awal/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">              
+                    
+</head>
+
+
+<div class="navbar">
+  <h1><i class="fa fa-heartbeat"></i>UJI KESEHATAN KAMU</h1>
+</div>
+
+  <div class="navbur">
+      <p>&copy; Dimas Suvani</p>
+  </div>
+
+
+<body>
+  
+<form id="stressForm" class="container">
+  <div class="question">
+    <p>1. Apakah Anda sering merasa kewalahan atau stres?</p>
+    <div class="answer">
+      <input type="radio" name="q1" value="ya"> Ya
+      <input type="radio" name="q1" value="tidak"> Tidak
+      <input type="radio" name="q1" value="sering"> Sering
+      <input type="radio" name="q1" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>2. Apakah Anda mengalami kesulitan tidur atau gangguan tidur?</p>
+    <div class="answer">
+      <input type="radio" name="q2" value="ya"> Ya
+      <input type="radio" name="q2" value="tidak"> Tidak
+      <input type="radio" name="q2" value="sering"> Sering
+      <input type="radio" name="q2" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>3. Apakah Anda merasa sering merasa tertekan atau stres dalam kehidupan sehari-hari?</p>
+    <div class="answer">
+      <input type="radio" name="q3" value="ya"> Ya
+      <input type="radio" name="q3" value="tidak"> Tidak
+      <input type="radio" name="q3" value="sering"> Sering
+      <input type="radio" name="q3" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>4. Apakah Anda merasa stres berdampak negatif pada hubungan interpersonal Anda?</p>
+    <div class="answer">
+      <input type="radio" name="q4" value="ya"> Ya
+      <input type="radio" name="q4" value="tidak"> Tidak
+      <input type="radio" name="q4" value="sering"> Sering
+      <input type="radio" name="q4" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>5. Apakah Anda merasa stres mempengaruhi produktivitas dan kinerja Anda? </p>
+    <div class="answer">
+      <input type="radio" name="q5" value="ya"> Ya
+      <input type="radio" name="q5" value="tidak"> Tidak
+      <input type="radio" name="q5" value="sering"> Sering
+      <input type="radio" name="q5" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>6. Apakah Anda merasa stres berdampak pada pola makan atau kebiasaan makan Anda?</p>
+    <div class="answer">
+      <input type="radio" name="q6" value="ya"> Ya
+      <input type="radio" name="q6" value="tidak"> Tidak
+      <input type="radio" name="q6" value="sering"> Sering
+      <input type="radio" name="q6" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>7. Apakah Anda merasa sulit untuk bersantai atau menikmati waktu luang karena stres?</p>
+    <div class="answer">
+      <input type="radio" name="q7" value="ya"> Ya
+      <input type="radio" name="q7" value="tidak"> Tidak
+      <input type="radio" name="q7" value="sering"> Sering
+      <input type="radio" name="q7" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>8.  Apakah ada aktivitas atau hobi yang membantu Anda meredakan stres?</p>
+    <div class="answer">
+      <input type="radio" name="q8" value="ya"> Ya
+      <input type="radio" name="q8" value="tidak"> Tidak
+      <input type="radio" name="q8" value="sering"> Sering
+      <input type="radio" name="q8" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>9. Apakah Anda mampu berkomunikasi dan bekerja sama dengan efektif dengan orang lain saat sedang stres?</p>
+    <div class="answer">
+      <input type="radio" name="q9" value="ya"> Ya
+      <input type="radio" name="q9" value="tidak"> Tidak
+      <input type="radio" name="q9" value="sering"> Sering
+      <input type="radio" name="q9" value="jarang"> Jarang
+    </div>
+  </div>
+  <div class="question">
+    <p>10.  Apakah Anda merasa sulit untuk bersantai dan melepaskan diri setelah hari yang penuh tekanan?</p>
+    <div class="answer">
+      <input type="radio" name="q10" value="ya"> Ya
+      <input type="radio" name="q10" value="tidak"> Tidak
+      <input type="radio" name="q10" value="sering"> Sering
+      <input type="radio" name="q10" value="jarang"> Jarang
+    </div>
+  </div>
+  <!-- Tambahkan pertanyaan lain di sini -->
+  <button type="submit">Cek Nilai Anda</button>
+
+  <table id="scoreTable">
+    <thead>
+        <tr>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Scores will be dynamically added here using JavaScript -->
+    </tbody>
+</table>
+<button id="refreshButton"><i class="fa fa-refresh"></i></button>
+</form>
+</body>
+<script src="/Awal/script.js"></script>
+</html>
