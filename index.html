@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stress Assessment</title>
+    <title>UJI KESEHATAN KAMU</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">              
-                    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="icon" href="/img/bed-pulse-solid.svg" type="image/x-icon"> <!-- Replace "favicon.ico" with the path to your favicon image file -->
 </head>
 
 
 <div class="navbar">
-  <h1><i class="fa fa-heartbeat"></i>UJI KESEHATAN KAMU</h1>
+  <h1><i class="fa fa-heartbeat"></i><span class="icon-text">UJI KESEHATAN KAMU</span></h1>
 </div>
-
   <div class="navbur">
       <p>&copy; Dimas Suvani</p>
   </div>
@@ -27,9 +26,9 @@
   <div class="question">
     <p>1. Apakah Anda sering merasa kewalahan atau stres?</p>
     <div class="answer">
-      <input type="radio" name="q1" value="ya"> Ya
-      <input type="radio" name="q1" value="tidak"> Tidak
-      <input type="radio" name="q1" value="sering"> Sering
+      <input type="radio" name="q1" value="ya" > Ya
+      <input type="radio" name="q1" value="tidak" > Tidak
+      <input type="radio" name="q1" value="sering" > Sering
       <input type="radio" name="q1" value="jarang"> Jarang
     </div>
   </div>
@@ -115,12 +114,12 @@
     </div>
   </div>
   <!-- Tambahkan pertanyaan lain di sini -->
-  <button type="submit">Cek Nilai Anda</button>
+  <button type="submit" id="submitButton">Cek Nilai Anda</button>
 
   <table id="scoreTable">
     <thead>
         <tr>
-            <th>Score</th>
+            <th>Riwayat Nilai :</th>
         </tr>
     </thead>
     <tbody>
@@ -130,5 +129,5 @@
 <button id="refreshButton"><i class="fa fa-refresh"></i></button>
 </form>
 </body>
-<script src="script.js"></script>
+<script src="/Awal/script.js"></script>
 </html>

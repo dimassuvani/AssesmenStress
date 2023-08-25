@@ -1,8 +1,47 @@
-document.getElementById("refreshButton").addEventListener("click", function() {
-  location.reload();
+const stressForm = document.getElementById("stressForm");
+const submitButton = document.getElementById("submitButton");
+
+// Hide the submit button initially
+submitButton.style.display = "none";
+
+stressForm.addEventListener("change", function() {
+  const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+
+  // Check if all questions are answered
+  if (selectedAnswers.length === 10) {
+    submitButton.style.display = "block";
+  } else {
+    submitButton.style.display = "none";
+  }
 });
-document.getElementById("stressForm").addEventListener("submit", function(event) {
+
+stressForm.addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent page refresh after form submission
+
+  // Check if the notification has been shown before
+  var notificationShown = sessionStorage.getItem("notificationShown");
+
+  if (!notificationShown) {
+    // Get the values of the selected answers
+    var answers = [];
+    for (var i = 1; i <= 10; i++) {
+      var question = "q" + i;
+      var selectedAnswer = document.querySelector('input[name="' + question + '"]:checked');
+      if (selectedAnswer) {
+        answers.push(selectedAnswer.value);
+      } else {
+        // If any question is unanswered, display an error message and return
+        alert("Please answer all questions before calculating the score.");
+        return;
+      }
+    }
+
+    // Rest of the code for calculating and displaying the score
+    // ...
+
+    // Set the notification status to true
+    sessionStorage.setItem("notificationShown", true);
+  }
 
   // Get the values of the selected answers
   var answers = [];
@@ -18,11 +57,13 @@ document.getElementById("stressForm").addEventListener("submit", function(event)
   var score = 0;
   for (var j = 0; j < answers.length; j++) {
     if (answers[j] === "ya") {
-      score += 10; // Add 10 to the score if the answer is "ya"
+      score += 9; // Add 10 to the score if the answer is "ya"
     } else if (answers[j] === "sering") {
       score += 5; // Add 5 to the score if the answer is "sering"
     } else if (answers[j] === "jarang") {
       score += 2; // Add 2 to the score if the answer is "jarang"
+    } else if (answers[j] === "tidak") {
+      score += 1; // Add 1 to the score if the answer is "tidak"
     }
   }
 
@@ -54,7 +95,7 @@ document.getElementById("stressForm").addEventListener("submit", function(event)
   scoreTable.appendChild(scoreTableRow);
 
   var questionCell = document.createElement("td");
-  questionCell.textContent = "Total Score:";
+  questionCell.textContent = "Nilai Kamu:";
   scoreTableRow.appendChild(questionCell);
 
   var scoreCell = document.createElement("td");
@@ -64,14 +105,18 @@ document.getElementById("stressForm").addEventListener("submit", function(event)
   var descriptionCell = document.createElement("td");
   var description = "";
   if (score < 50) {
-    description = "Sehat";
-  } else if (score >= 50 && score < 80) {
-    description = "Agak Stress";
-  } else if (score >= 80 && score < 100) {
-    description = "Stress";
-  } else if (score === 100) {
-    description = "Anda harus banyak istirahat";
+    description = "Masih Sehat";
+  } else if (score >= 51 && score < 70) {
+    description = "Kurang Sehat";
+  } else if (score >= 71 && score < 90) {
+    description = "Cukup Stress";
+  } else if (score >= 91 && score < 100) {
+    description = "Aku Tahu Pasti Kamu Kurang Duit";
   }
   descriptionCell.textContent = description;
   scoreTableRow.appendChild(descriptionCell);
+});
+
+document.getElementById("refreshButton").addEventListener("click", function() {
+  location.reload();
 });

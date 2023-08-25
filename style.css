@@ -10,7 +10,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
-  max-width: 1400px;
+  max-width: 400px;
   margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 70px;
@@ -30,6 +30,10 @@ h1 {
   font-size: 16px;
 }
 
+.question p {
+  font-weight: bold;
+}
+
 .answer {
   display: flex;
   justify-content: center;
@@ -41,6 +45,11 @@ h1 {
 
 .answer input[type="radio"] {
   margin-right: 10px;
+}
+
+.answer label {
+  display: block;
+  margin-bottom: 5px;
 }
 
 button[type="submit"] {
@@ -88,6 +97,15 @@ th {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+}
+
+.navbar h1 .icon-text {
+  margin-left: 10px;
 }
 
 .navbur {
@@ -158,17 +176,45 @@ th {
   }
   #refreshButton {
     font-family: "poppins";
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     padding: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 10px;
+    border-radius: 150px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+  }
+  .navbur {
+    text-align: center;
+    position: bottom;
+  }
+  .navbar {
+    background-color: #0ec094;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .navbar h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  
+  .navbar h1 .icon-text {
+    margin-left: 10px;
+  }
+  .question p {
+    font-weight: bold;
   }
 }
 
@@ -183,6 +229,9 @@ th {
 
   .question {
     margin-bottom: 20px;
+  }
+  .question p {
+    font-weight: bold;
   }
 
   .answer {
@@ -220,6 +269,30 @@ th {
   th {
     background-color: #0ec094;
   }
+ 
+.navbur {
+  text-align: center;
+  position: bottom;
+}
+.navbar {
+  background-color: #0ec094;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar h1 .icon-text {
+  margin-left: 10px;
 }
 
 @media (max-width: 480px) {
@@ -234,6 +307,9 @@ th {
   }
   .question {
     font-size: 10px;
+  }
+  .question p {
+    font-weight: bold;
   }
   button[type="submit"] {
     font-size: 10px;
@@ -256,9 +332,26 @@ th {
     justify-content: center;
   }
   .navbar {
-    text-align: center;
+    background-color: #0ec094;
+    color: #fff;
     padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
+  
+  .navbar h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar h1 .icon-text {
+    margin-left: 10px;
+  }
+  
   table {
     width: 100%;
     border-collapse: collapse;
@@ -273,4 +366,9 @@ th {
   th {
     background-color: #0ec094;
   }
+  .navbur {
+    text-align: center;
+    position: bottom;
+  }
+}
 }
