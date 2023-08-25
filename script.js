@@ -103,18 +103,18 @@ stressForm.addEventListener("submit", function(event) {
   scoreTableRow.appendChild(scoreCell);
 
   var descriptionCell = document.createElement("td");
-  var description = "";
-  if (score < 50) {
-    description = "Masih Sehat";
-  } else if (score >= 51 && score < 70) {
-    description = "Kurang Sehat";
-  } else if (score >= 71 && score < 90) {
-    description = "Cukup Stress";
-  } else if (score >= 91 && score < 100) {
-    description = "Aku Tahu Pasti Kamu Kurang Duit";
-  }
-  descriptionCell.textContent = description;
-  scoreTableRow.appendChild(descriptionCell);
+var description = "";
+if (score < 50) {
+  description = "Masih Sehat";
+} else if (score >= 50 && score < 70) {
+  description = "Kurang Sehat";
+} else if (score >= 70 && score < 90) {
+  description = "Cukup Stress";
+} else if (score >= 90 && score <= 100) {
+  description = "Aku Tahu Pasti Kamu Kurang Duit";
+}
+descriptionCell.textContent = description;
+scoreTableRow.appendChild(descriptionCell);
 });
 
 document.getElementById("refreshButton").addEventListener("click", function() {
