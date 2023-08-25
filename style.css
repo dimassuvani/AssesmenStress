@@ -127,6 +127,10 @@ th {
   width: 100%;
   text-align: center;
 }
+.navbur a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: white; /* Memberikan warna putih */
+}
 
 #refreshButton {
   font-family: "poppins";
